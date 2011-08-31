@@ -7,7 +7,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
-public class GameActivity extends Activity {
+public final class GameActivity extends Activity {
 
     /** A handle to the thread that's actually running the animation. */
     private MainThread main_thread;

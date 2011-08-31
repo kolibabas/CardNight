@@ -5,10 +5,10 @@ import android.os.Bundle;
 
 /**
  * Entry Activity for the application
- * @author Fuego
+ * @author kolibabas
  *
  */
-public class CardNight extends Activity {
+public final class CardNight extends Activity {
 
 	/** Called when the activity is first created. */
     @Override

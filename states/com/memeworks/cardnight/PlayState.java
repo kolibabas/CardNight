@@ -10,16 +10,27 @@ public class PlayState implements GameState {
 	}
 
 	public Canvas Draw(Canvas c) {
-		// TODO Auto-generated method stub
+		OverlayPanel.Draw(c);
 		return c;
 	}
 
 	public void Frame_Started(float frame_time) {
-		// TODO Auto-generated method stub
+		OverlayPanel.Frame_Started(frame_time);
 	}	
 
 	public boolean Touch_Event(MotionEvent evt) {
-		// TODO Auto-generated method stub
+		if (evt.getAction() == MotionEvent.ACTION_UP)
+		{
+			if (!OverlayPanel.Visible)
+			{
+				OverlayPanel.Show(OverlayPanel.UI_TURN_NOTIFY);
+			}
+		}
+		
+		if (OverlayPanel.Visible)
+		{
+			OverlayPanel.Touch_Event(evt);
+		}
 		return false;
 	}
 

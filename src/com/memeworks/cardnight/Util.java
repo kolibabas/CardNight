@@ -9,7 +9,7 @@ import android.graphics.BitmapFactory;
  * @author kolibabas
  *
  */
-public class Util {
+public final class Util {
 	
 	//Global Variables
     public static int SCREEN_WIDTH;
@@ -22,6 +22,14 @@ public class Util {
 	public static MenuState	STATE_MENU;
 	
 	//Bitmaps
+	public static Bitmap BMP_OVERLAY_PANEL_LEFT;
+	public static Bitmap BMP_OVERLAY_PANEL_RIGHT;
+	public static Bitmap BMP_OVERLAY_PANEL_PLAY_BUTTON;
+	public static Bitmap BMP_OVERLAY_PANEL_PLAY_BUTTON_PRESSED;
+	public static Bitmap BMP_OVERLAY_PANEL_PASS_BUTTON;
+	public static Bitmap BMP_OVERLAY_PANEL_PASS_BUTTON_PRESSED;
+	public static Bitmap BMP_OVERLAY_PANEL_GO_BUTTON;
+	public static Bitmap BMP_OVERLAY_PANEL_GO_BUTTON_PRESSED;
 	
 	//Global Constants
 

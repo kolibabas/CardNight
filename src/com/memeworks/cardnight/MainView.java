@@ -13,9 +13,9 @@ import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-class MainView extends SurfaceView implements SurfaceHolder.Callback {
+final class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
-	class MainThread extends Thread {
+	final class MainThread extends Thread {
 		/** Running state of the application */
 		private boolean is_running;
 
@@ -35,8 +35,15 @@ class MainView extends SurfaceView implements SurfaceHolder.Callback {
             Resources res = context.getResources();
             
             //World Elements
-            //Util.Load_Bitmap(resources, bitmap, id)
-            
+            Util.BMP_OVERLAY_PANEL_LEFT = BitmapFactory.decodeResource(res, R.drawable.overlaypanelleft);
+            Util.BMP_OVERLAY_PANEL_RIGHT = BitmapFactory.decodeResource(res, R.drawable.overlaypanelright);
+            Util.BMP_OVERLAY_PANEL_GO_BUTTON = BitmapFactory.decodeResource(res, R.drawable.overlaygobutton);
+            Util.BMP_OVERLAY_PANEL_GO_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.overlaygobuttonpressed);
+            Util.BMP_OVERLAY_PANEL_PLAY_BUTTON = BitmapFactory.decodeResource(res, R.drawable.overlayplaybutton);
+            Util.BMP_OVERLAY_PANEL_PLAY_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.overlayplaybuttonpressed);
+            Util.BMP_OVERLAY_PANEL_PASS_BUTTON = BitmapFactory.decodeResource(res, R.drawable.overlaypassbutton);
+            Util.BMP_OVERLAY_PANEL_PASS_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.overlaypassbuttonpressed);
+           
 		}
 
 		/**
