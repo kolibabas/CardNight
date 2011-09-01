@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, CardNightActivity!</string>
     <string name="app_name">CardNight</string>
+    <string name="UUID">57a1e99b-e645-49d7-989d-3472ae7dfc31</string>
+    <string name="player_count_request">HOW MANY PLAYERS?</string>
+    <string name="waiting_for_players">WAITING FOR PLAYERS</string>
+    <string name="turn_notify">YOUR TURN</string>
 </resources>
