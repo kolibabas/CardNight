@@ -86,7 +86,7 @@ public final class OverlayPanel {
 		current_ui_state = ui_state;
 		current_state = STATE_INBOUND;
 		animation_timer = 0;
-		Visible = true;
+		Visible = true; 
 		
 		left_panel_pos_x = 0 - Util.BMP_OVERLAY_PANEL_LEFT.getWidth();
 		right_panel_pos_x = Util.SCREEN_WIDTH;
@@ -101,7 +101,7 @@ public final class OverlayPanel {
 		switch(ui_state)
 		{
 		case UI_PLAYER_COUNT:
-			overlay_text.append(R.string.player_count_request);
+			overlay_text.append(R.string.player_count_request); //TODO Needs a Context.getString()
 			go_button_rect.set(Util.SCREEN_CENTER_X - (Util.BMP_OVERLAY_PANEL_GO_BUTTON.getWidth() / 2),
 							   Util.SCREEN_HEIGHT - (2 * Util.BMP_OVERLAY_PANEL_GO_BUTTON.getHeight()), 
 							   Util.SCREEN_CENTER_X + (Util.BMP_OVERLAY_PANEL_GO_BUTTON.getWidth() / 2),
