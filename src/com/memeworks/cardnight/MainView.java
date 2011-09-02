@@ -32,9 +32,29 @@ final class MainView extends SurfaceView implements SurfaceHolder.Callback {
             surface_holder = holder;
             
             // Load Resources here
-            Resources res = context.getResources();
-            
-            //World Elements
+            Load_Bitmaps(context);
+           
+		}
+		
+		/**
+		 * Called at startup, loads all images into their static containers
+		 */
+		private void Load_Bitmaps(Context context)
+		{
+			Resources res = context.getResources();
+			
+			//Main Menu
+			Util.BMP_MENU_BG = BitmapFactory.decodeResource(res, R.drawable.menubackground);
+			Util.BMP_HOTSEAT_BUTTON = BitmapFactory.decodeResource(res, R.drawable.menuhotseatbutton);
+			Util.BMP_HOTSEAT_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.menuhotseatbuttonpressed);
+			Util.BMP_BLUETOOTH_BUTTON = BitmapFactory.decodeResource(res, R.drawable.menubluetoothbutton);
+			Util.BMP_BLUETOOTH_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.menubluetoothbuttonpressed);
+			Util.BMP_SET_NAME_BUTTON = BitmapFactory.decodeResource(res, R.drawable.menusetnamebutton);
+			Util.BMP_SET_NAME_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.menusetnamebuttonpressed);
+			Util.BMP_SET_CARD_BACK_BUTTON = BitmapFactory.decodeResource(res, R.drawable.menusetcardbackbutton);
+			Util.BMP_SET_CARD_BACK_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.menusetcardbackbuttonpressed);
+			
+			//Overlay Panel
             Util.BMP_OVERLAY_PANEL_LEFT = BitmapFactory.decodeResource(res, R.drawable.overlaypanelleft);
             Util.BMP_OVERLAY_PANEL_RIGHT = BitmapFactory.decodeResource(res, R.drawable.overlaypanelright);
             Util.BMP_OVERLAY_PANEL_GO_BUTTON = BitmapFactory.decodeResource(res, R.drawable.overlaygobutton);
@@ -43,7 +63,6 @@ final class MainView extends SurfaceView implements SurfaceHolder.Callback {
             Util.BMP_OVERLAY_PANEL_PLAY_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.overlayplaybuttonpressed);
             Util.BMP_OVERLAY_PANEL_PASS_BUTTON = BitmapFactory.decodeResource(res, R.drawable.overlaypassbutton);
             Util.BMP_OVERLAY_PANEL_PASS_BUTTON_PRESSED = BitmapFactory.decodeResource(res, R.drawable.overlaypassbuttonpressed);
-           
 		}
 
 		/**
@@ -94,7 +113,7 @@ final class MainView extends SurfaceView implements SurfaceHolder.Callback {
          */
         public void Start() {
         	is_running = true;
-            Util.Change_State(Util.STATE_PLAY);
+            Util.Change_State(Util.STATE_MENU);
         }
         
         /**

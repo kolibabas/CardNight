@@ -21,7 +21,18 @@ public final class Util {
 	public static PlayState STATE_PLAY;
 	public static MenuState	STATE_MENU;
 	
-	//Bitmaps
+	//Menu Bitmaps
+	public static Bitmap BMP_MENU_BG;
+	public static Bitmap BMP_HOTSEAT_BUTTON;
+	public static Bitmap BMP_HOTSEAT_BUTTON_PRESSED;
+	public static Bitmap BMP_BLUETOOTH_BUTTON;
+	public static Bitmap BMP_BLUETOOTH_BUTTON_PRESSED;
+	public static Bitmap BMP_SET_NAME_BUTTON;
+	public static Bitmap BMP_SET_NAME_BUTTON_PRESSED;
+	public static Bitmap BMP_SET_CARD_BACK_BUTTON;
+	public static Bitmap BMP_SET_CARD_BACK_BUTTON_PRESSED;
+	
+	//Overlay Panel Bitmaps
 	public static Bitmap BMP_OVERLAY_PANEL_LEFT;
 	public static Bitmap BMP_OVERLAY_PANEL_RIGHT;
 	public static Bitmap BMP_OVERLAY_PANEL_PLAY_BUTTON;

@@ -4,6 +4,8 @@ import com.memeworks.cardnight.R;
 import com.memeworks.cardnight.MainView.MainThread;
 
 import android.app.Activity;
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.KeyEvent;
 
@@ -15,6 +17,9 @@ public final class GameActivity extends Activity {
     /** A handle to the View in which the game is running. */
     @SuppressWarnings("unused")
 	private MainView main_view;
+    
+    /** A dialog to allow the user to set their name */
+    private final int DIALOG_SET_NAME = 0;
 
     /** Called when the activity is first created. */
     @Override
