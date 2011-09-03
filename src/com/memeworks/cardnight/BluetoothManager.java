@@ -72,5 +72,15 @@ public final class BluetoothManager {
             }
         }
     }
+	
+	/**
+	 * Gets a player name
+	 * @param player_index Which player name to get
+	 * @return The name
+	 */
+	public static String Get_Player_Name(int player_index)
+	{
+		return "Placeholder"; //TODO Get player name from other device, should be pre-populated before this call.
+	}
 
 }
