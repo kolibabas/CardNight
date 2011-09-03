@@ -11,14 +11,23 @@ import android.os.Bundle;
  */
 public final class CardNight extends Activity {
 
+	/** Pointer to the game's Context reference */
 	public static Context Game_Context;
+	
+	/** Name for the local player */
+	public static String Player_Name;
 	
 	//Mode Enum
 	public static int Current_Mode;
 	public static final int MODE_HOTSEAT = 0;
 	public static final int MODE_BLUETOOTH = 0;
-	
-	public static String Player_Name;
+
+	//Suit Enum
+	public static final int SUIT_SPADES = 0;
+	public static final int SUIT_CLUBS = 1;
+	public static final int SUIT_DIAMONDS = 2;
+	public static final int SUIT_HEARTS = 3;
+	public static final int SUIT_COUNT = 4;
 	
 	/** Called when the activity is first created. */
     @Override
@@ -28,7 +37,7 @@ public final class CardNight extends Activity {
         
         Game_Context = this;
         
-        //TODO Set/Get Player name from memory
+        //TODO Set/Get Player name from device memory
         Player_Name = "Player";
         
         //Instantiate all GameStates
