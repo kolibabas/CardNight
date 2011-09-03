@@ -101,17 +101,17 @@ public final class OverlayPanel {
 		switch(ui_state)
 		{
 		case UI_PLAYER_COUNT:
-			overlay_text.append(R.string.player_count_request); //TODO Needs a Context.getString()
+			overlay_text.append(CardNight.Game_Context.getString(R.string.player_count_request));
 			go_button_rect.set(Util.SCREEN_CENTER_X - (Util.BMP_OVERLAY_PANEL_GO_BUTTON.getWidth() / 2),
 							   Util.SCREEN_HEIGHT - (2 * Util.BMP_OVERLAY_PANEL_GO_BUTTON.getHeight()), 
 							   Util.SCREEN_CENTER_X + (Util.BMP_OVERLAY_PANEL_GO_BUTTON.getWidth() / 2),
 							   Util.SCREEN_HEIGHT - (1 * Util.BMP_OVERLAY_PANEL_GO_BUTTON.getHeight()));
 			break;
 		case UI_WAIT_PLAYERS:
-			overlay_text.append(R.string.waiting_for_players);
+			overlay_text.append(CardNight.Game_Context.getString(R.string.waiting_for_players));
 			break;
 		case UI_TURN_NOTIFY:
-			overlay_text.append(R.string.turn_notify);
+			overlay_text.append(CardNight.Game_Context.getString(R.string.turn_notify));
 			play_button_rect.set(Util.SCREEN_CENTER_X - (Util.BMP_OVERLAY_PANEL_PLAY_BUTTON.getWidth()),
 							     Util.SCREEN_CENTER_Y, 
 							     Util.SCREEN_CENTER_X,
