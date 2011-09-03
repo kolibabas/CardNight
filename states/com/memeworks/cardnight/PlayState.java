@@ -4,6 +4,8 @@ import android.graphics.Canvas;
 import android.view.MotionEvent;
 
 public class PlayState implements GameState {
+	
+	private GameManager game;
 
 	public PlayState() {
 		// TODO Auto-generated method stub
@@ -18,15 +20,8 @@ public class PlayState implements GameState {
 		OverlayPanel.Frame_Started(frame_time);
 	}	
 
-	public boolean Touch_Event(MotionEvent evt) {
-		if (evt.getAction() == MotionEvent.ACTION_UP)
-		{
-			if (!OverlayPanel.Visible)
-			{
-				OverlayPanel.Show(OverlayPanel.UI_TURN_NOTIFY);
-			}
-		}
-		
+	public boolean Touch_Event(MotionEvent evt) {		
+		//Pass along events to the overlay
 		if (OverlayPanel.Visible)
 		{
 			OverlayPanel.Touch_Event(evt);
@@ -35,7 +30,8 @@ public class PlayState implements GameState {
 	}
 
 	public void Enter() {
-		// TODO Auto-generated method stub
+		OverlayPanel.Show(OverlayPanel.UI_PLAYER_COUNT);
+		// TODO Instantiate Game Manager. Overlay panel must block to get player and deck counts.
 	}
 
 	public void Leave() {
